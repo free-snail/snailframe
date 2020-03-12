@@ -1,0 +1,53 @@
+
+#监听端口
+
+ListenAddr = "127.0.0.1:9090"
+
+#日志配置
+[log]
+Report = false       #是否开启日志报告，开启后能够看到具体哪行代码发出的
+Level = 3            #设置日志级别
+# 0 PanicLevel Level
+# 1 FatalLevel
+# 2 ErrorLevel
+# 3 WarnLevel
+# 4 InfoLevel
+# 5 DebugLevel
+# 6 TraceLevel
+
+#数据库配置
+[mysql]
+Username = "root"
+Password = "root"
+Host = "127.0.0.1"
+Port = 3306
+DataBase = "#"
+CharSet= "utf8mb4"
+
+#模板配置
+[tpl]
+Dir = "views"     #模板文件目录
+Suffix = "jet"  #模板文件后缀
+Reload = false
+
+[res] #请求，以及输出相关配置
+#安全配置
+SafetheUrl = true #url传参只允许字母与数字？
+#session
+SessionKey = "############"
+SessionMaxAge = 100 #小于0立即删除,大于0 表示有效期为描述 单位为分钟
+
+CookiePath = "/"
+CookieDomain = ""
+CookieSameSite = 1 #http.SameSite
+CookieSecure = false
+CookieHttpOnly = false
+
+ShowErro = false #输出错误信息到浏览器
+
+AllowUploadType = ["doc","rar","pages"]
+AllowUploadMaxSize = 1024
+UploadDir = "upload" #相对路径
+MaxMultipartMemory = 1024 #单位k
+
+
